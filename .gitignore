@@ -1,0 +1,58 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# Env variables and credentials
+.env.*
+firebase_credentials.json
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Pytest
+.pytest_cache/
+
+# FastAPI / Uvicorn logs
+*.log
+
+# VSCode
+.vscode/
+
+# Mac and Linux
+.DS_Store
+Thumbs.db
+
+# Docker-related
+*.tar
+*.bak
+*.old
+
+# Ignore idea (JetBrains) settings
+.idea/
+
+# Output folders
+build/
+dist/
+*.egg-info/
