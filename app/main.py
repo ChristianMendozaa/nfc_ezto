@@ -3,7 +3,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from app.routers.nfc import router as nfc_router
+from app.controllers.nfc import router as nfc_router
+from app.controllers.nfc_pairing_controller import router as nfc_pairing_router
 
 # --- OpenAPI metadata ---
 app = FastAPI(
@@ -39,6 +40,7 @@ app.include_router(
     nfc_router,
     tags=["NFC"],
 )
+app.include_router(nfc_pairing_router, tags=["NFC pairing"])
 
 # --- Modelo para salud ---
 class HealthResponse(BaseModel):
