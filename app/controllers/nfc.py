@@ -7,10 +7,10 @@ import pytz
 router = APIRouter(tags=["NFC"])
 
 def registrar_entrada(dashboard_ref, member_data, plan_name, now_str, membership):
-    print(f"[LOG] Registrando ENTRADA para {member_data['name']} ({member_data['nfc_id']}) a las {now_str}")
+    print(f"[LOG] Registrando ENTRADA para {member_data['name']} ({member_data['id']}) a las {now_str}")
     dashboard_ref.set({
         "miembro": {
-            "id": member_data["nfc_id"],
+            "id": member_data["id"],
             "name": member_data["name"],
             "email": member_data["email"],
             "plan": plan_name,
@@ -49,14 +49,16 @@ async def check_access(request: Request, background_tasks: BackgroundTasks, req:
         print(f"[ERROR] Miembro con NFC ID {req.nfc_id} no encontrado")
         raise HTTPException(status_code=404, detail="Miembro no encontrado")
 
-    member_data = member_docs[0].to_dict()
-    member_data["nfc_id"] = req.nfc_id
+    member_doc = member_docs[0]
+    member_data = member_doc.to_dict()
+    member_id = member_doc.id
+    member_data["id"] = member_id
 
-    print(f"[LOG] Miembro encontrado: {member_data['name']}")
+    print(f"[LOG] Miembro encontrado: {member_data['name']} ({member_id})")
 
-    # Buscar membresía activa asociada al mismo nfc_id (a través del user_id)
+    # Buscar membresía activa con user_id
     memberships = db.collection("user_memberships")\
-        .where("nfc_id", "==", req.nfc_id)\
+        .where("user_id", "==", member_id)\
         .where("status", "==", "active")\
         .get()
 
@@ -85,14 +87,14 @@ async def check_access(request: Request, background_tasks: BackgroundTasks, req:
             message="La membresía ha expirado"
         )
 
-    # Obtener plan
+    # Obtener información del plan
     plan = db.collection("membership_plans").document(plan_id).get()
     plan_data = plan.to_dict() if plan.exists else {}
     plan_name = plan_data.get("name", "")
 
     print(f"[LOG] Plan activo: {plan_name}, válido hasta {membership['end_date']}")
 
-    # Guardar en el dashboard con base en el NFC ID
+    # Acceder al dashboard usando el NFC ID como ID de documento
     dashboard_ref = db.collection("dashboard").document(req.nfc_id)
     dashboard_doc = dashboard_ref.get()
     now_str = datetime.now(pytz.timezone("America/La_Paz")).strftime("%Y-%m-%d %H:%M:%S")
@@ -102,13 +104,12 @@ async def check_access(request: Request, background_tasks: BackgroundTasks, req:
         if dashboard_data["miembro"].get("entrada") and not dashboard_data["miembro"].get("salida"):
             entrada_str = dashboard_data["miembro"]["entrada"]
             salida_str = now_str
+            duracion = str(datetime.strptime(salida_str, "%Y-%m-%d %H:%M:%S") -
+                           datetime.strptime(entrada_str, "%Y-%m-%d %H:%M:%S"))
 
             print(f"[LOG] Usuario ya estaba dentro. Procesando salida...")
 
             background_tasks.add_task(registrar_salida, dashboard_ref, entrada_str, salida_str)
-
-            duracion = str(datetime.strptime(salida_str, "%Y-%m-%d %H:%M:%S") -
-                           datetime.strptime(entrada_str, "%Y-%m-%d %H:%M:%S"))
 
             return AccessResponse(
                 id=req.nfc_id,
