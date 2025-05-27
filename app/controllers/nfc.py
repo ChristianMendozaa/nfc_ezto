@@ -43,7 +43,7 @@ async def check_access(request: Request, background_tasks: BackgroundTasks, req:
         print(f"[ERROR] NFC ID inválido")
         raise HTTPException(status_code=400, detail="ID NFC inválido o vacío")
 
-    member_docs = db.collection("members").where("id", "==", req.nfc_id).get()
+    member_docs = db.collection("members").where("nfc_id", "==", req.nfc_id).get()
     if not member_docs:
         print(f"[ERROR] Miembro con NFC ID {req.nfc_id} no encontrado")
         raise HTTPException(status_code=404, detail="Miembro no encontrado")
