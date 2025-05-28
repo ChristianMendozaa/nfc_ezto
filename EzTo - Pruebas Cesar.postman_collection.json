@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "23526f87-e78b-4109-a060-99ba25eaf468",
+		"name": "EzTo - Pruebas Cesar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39583489",
+		"_collection_link": "https://lunar-eclipse-365832.postman.co/workspace/My-Workspace~f0c3f70f-3ac8-4e5c-8068-b55a3ff65753/collection/39583489-23526f87-e78b-4109-a060-99ba25eaf468?action=share&source=collection_link&creator=39583489"
+	},
+	"item": [
+		{
+			"name": "GET- Inventory",
+			"request": {
+				"auth": {
+					"type": "inherit"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/inventory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET- Reservations",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJYeFhiMno5YTVRZFgtOG9YenNkeGFYTkJwTXJQRElPNGc1MXpQZ2NEWS1jIn0.eyJleHAiOjE3NDgxNDYwNDcsImlhdCI6MTc0ODE0NTc0NywianRpIjoiNzM2Y2ExZjItODgzZi00ZTg2LWFiYTMtY2MxNmVjMzBhY2I2IiwiaXNzIjoiaHR0cDovL2tleWNsb2FrOjgwODAvcmVhbG1zL21hc3RlciIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJhNTY5ZjhkNy01NzJkLTQzNjEtYWUzMy04MDljODZkMmQ3NzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlenRvLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiI2NzUzZjgzMy0wYzFjLTQ2MTUtOTM1MS03ODAwMWQxNWUwMDgiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZ3ltX293bmVyIiwiZGVmYXVsdC1yb2xlcy1tYXN0ZXIiLCJvZmZsaW5lX2FjY2VzcyIsImd5bV9tZW1iZXIiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI2NzUzZjgzMy0wYzFjLTQ2MTUtOTM1MS03ODAwMWQxNWUwMDgiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJKdWFuIFBlcmV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoianVhbkBleGFtcGxlLmNvbSIsImdpdmVuX25hbWUiOiJKdWFuIiwiZmFtaWx5X25hbWUiOiJQZXJleiIsImVtYWlsIjoianVhbkBleGFtcGxlLmNvbSJ9.VZhSU0u3qtQY_jFsMZVc8ezZ1kFOr-IQBKQ2LPJNvPWckESl5E2jvUEp03JgqDTmLEW3fsLfkvk7iBp9Gi_0fOUy3XmUS_5QoL6L-uu_X_5Woyk--BbWUko7ZN2kwh4bf9BPQz7bdP0nrIvDS-0gwgH03XmDIlbNnwY0QG_-WycUxqDKr3h5lJ-HLsLgmE7qZDheyYrwhwidVkzH15BF0VcHpaRZGThSGo9Q-_ouEz-CeSluAPwMsbDF2CGLnyhRCqs6PiM1IqW0WIuzv5wM4Q2WmCXmE01u6SP9GMoIKTPBDENr-wtkPE4QL6J6TZ4HSxlJBDmQXlcwQ925xpqzZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/reservations/reservations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"reservations",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET- Membershipplans",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJYeFhiMno5YTVRZFgtOG9YenNkeGFYTkJwTXJQRElPNGc1MXpQZ2NEWS1jIn0.eyJleHAiOjE3NDgxNDkzNzgsImlhdCI6MTc0ODE0OTA3OCwianRpIjoiMTA5MTNhMjktYWFlYS00NzNmLThhMjItYmY3MWYyNDNlMjJmIiwiaXNzIjoiaHR0cDovL2tleWNsb2FrOjgwODAvcmVhbG1zL21hc3RlciIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJhNTY5ZjhkNy01NzJkLTQzNjEtYWUzMy04MDljODZkMmQ3NzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlenRvLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiI5NzIwN2IyZi03NTc0LTRmYTItYjdlNC0zZTBlNWU1MzgyODAiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZ3ltX293bmVyIiwiZGVmYXVsdC1yb2xlcy1tYXN0ZXIiLCJvZmZsaW5lX2FjY2VzcyIsImd5bV9tZW1iZXIiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI5NzIwN2IyZi03NTc0LTRmYTItYjdlNC0zZTBlNWU1MzgyODAiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJKdWFuIFBlcmV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoianVhbkBleGFtcGxlLmNvbSIsImdpdmVuX25hbWUiOiJKdWFuIiwiZmFtaWx5X25hbWUiOiJQZXJleiIsImVtYWlsIjoianVhbkBleGFtcGxlLmNvbSJ9.NQGgMvL07rgMKbZ4BjET0WMDUxgocwUw3mkjYDarJZMiA8heF5PZUUpZkEUxZmM-9lnfufVr_uCCZ7ov7NYcIGXae9dj7zj27yygANOrMgBeUhPin0zlHpQiidFqeEYHRLaeu6AX_OD9DXt9Ph6WDUfxHUN0jBZuNViTCKfKMaYgYl9RLNTtpwpzYRVKtw0mRq9BrSEIhrns89qoMdfh8Dgf3Jt8BbPwCcTyDxyzE4pst02Im4HCj2hv2ezb6_AqvtL7tgSejiGsfyIGofpcy0BvAioskVBkf6Bjo3gvYHAFD5yRQOn-SKBDpVTkSpUmUrom9B3Zg6Zhyc7OuOEOXQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/memberships-plans/memberships-plans/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"memberships-plans",
+						"memberships-plans",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST- Membershipplans",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJYeFhiMno5YTVRZFgtOG9YenNkeGFYTkJwTXJQRElPNGc1MXpQZ2NEWS1jIn0.eyJleHAiOjE3NDgxNDkzNzgsImlhdCI6MTc0ODE0OTA3OCwianRpIjoiMTA5MTNhMjktYWFlYS00NzNmLThhMjItYmY3MWYyNDNlMjJmIiwiaXNzIjoiaHR0cDovL2tleWNsb2FrOjgwODAvcmVhbG1zL21hc3RlciIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJhNTY5ZjhkNy01NzJkLTQzNjEtYWUzMy04MDljODZkMmQ3NzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlenRvLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiI5NzIwN2IyZi03NTc0LTRmYTItYjdlNC0zZTBlNWU1MzgyODAiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZ3ltX293bmVyIiwiZGVmYXVsdC1yb2xlcy1tYXN0ZXIiLCJvZmZsaW5lX2FjY2VzcyIsImd5bV9tZW1iZXIiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI5NzIwN2IyZi03NTc0LTRmYTItYjdlNC0zZTBlNWU1MzgyODAiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJKdWFuIFBlcmV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoianVhbkBleGFtcGxlLmNvbSIsImdpdmVuX25hbWUiOiJKdWFuIiwiZmFtaWx5X25hbWUiOiJQZXJleiIsImVtYWlsIjoianVhbkBleGFtcGxlLmNvbSJ9.NQGgMvL07rgMKbZ4BjET0WMDUxgocwUw3mkjYDarJZMiA8heF5PZUUpZkEUxZmM-9lnfufVr_uCCZ7ov7NYcIGXae9dj7zj27yygANOrMgBeUhPin0zlHpQiidFqeEYHRLaeu6AX_OD9DXt9Ph6WDUfxHUN0jBZuNViTCKfKMaYgYl9RLNTtpwpzYRVKtw0mRq9BrSEIhrns89qoMdfh8Dgf3Jt8BbPwCcTyDxyzE4pst02Im4HCj2hv2ezb6_AqvtL7tgSejiGsfyIGofpcy0BvAioskVBkf6Bjo3gvYHAFD5yRQOn-SKBDpVTkSpUmUrom9B3Zg6Zhyc7OuOEOXQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Plan Gold\",\r\n  \"description\": \"Acceso premium a todas las clases y eventos exclusivos durante un año.\",\r\n  \"capacity\": 50,\r\n  \"duration_months\": 12,\r\n  \"price\": 99.99,\r\n  \"services_offered\": [\r\n    \"Clases ilimitadas\",\r\n    \"Acceso a talleres especiales\",\r\n    \"Sesiones de coaching personal\",\r\n    \"Soporte prioritario\"\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/memberships-plans/memberships-plans/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"memberships-plans",
+						"memberships-plans",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET- Clases",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJYeFhiMno5YTVRZFgtOG9YenNkeGFYTkJwTXJQRElPNGc1MXpQZ2NEWS1jIn0.eyJleHAiOjE3NDgxNDYwNDcsImlhdCI6MTc0ODE0NTc0NywianRpIjoiNzM2Y2ExZjItODgzZi00ZTg2LWFiYTMtY2MxNmVjMzBhY2I2IiwiaXNzIjoiaHR0cDovL2tleWNsb2FrOjgwODAvcmVhbG1zL21hc3RlciIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJhNTY5ZjhkNy01NzJkLTQzNjEtYWUzMy04MDljODZkMmQ3NzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlenRvLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiI2NzUzZjgzMy0wYzFjLTQ2MTUtOTM1MS03ODAwMWQxNWUwMDgiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZ3ltX293bmVyIiwiZGVmYXVsdC1yb2xlcy1tYXN0ZXIiLCJvZmZsaW5lX2FjY2VzcyIsImd5bV9tZW1iZXIiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI2NzUzZjgzMy0wYzFjLTQ2MTUtOTM1MS03ODAwMWQxNWUwMDgiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJKdWFuIFBlcmV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoianVhbkBleGFtcGxlLmNvbSIsImdpdmVuX25hbWUiOiJKdWFuIiwiZmFtaWx5X25hbWUiOiJQZXJleiIsImVtYWlsIjoianVhbkBleGFtcGxlLmNvbSJ9.VZhSU0u3qtQY_jFsMZVc8ezZ1kFOr-IQBKQ2LPJNvPWckESl5E2jvUEp03JgqDTmLEW3fsLfkvk7iBp9Gi_0fOUy3XmUS_5QoL6L-uu_X_5Woyk--BbWUko7ZN2kwh4bf9BPQz7bdP0nrIvDS-0gwgH03XmDIlbNnwY0QG_-WycUxqDKr3h5lJ-HLsLgmE7qZDheyYrwhwidVkzH15BF0VcHpaRZGThSGo9Q-_ouEz-CeSluAPwMsbDF2CGLnyhRCqs6PiM1IqW0WIuzv5wM4Q2WmCXmE01u6SP9GMoIKTPBDENr-wtkPE4QL6J6TZ4HSxlJBDmQXlcwQ925xpqzZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/classes/classes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"classes",
+						"classes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET- Clases Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJYeFhiMno5YTVRZFgtOG9YenNkeGFYTkJwTXJQRElPNGc1MXpQZ2NEWS1jIn0.eyJleHAiOjE3NDgxNDYwNDcsImlhdCI6MTc0ODE0NTc0NywianRpIjoiNzM2Y2ExZjItODgzZi00ZTg2LWFiYTMtY2MxNmVjMzBhY2I2IiwiaXNzIjoiaHR0cDovL2tleWNsb2FrOjgwODAvcmVhbG1zL21hc3RlciIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJhNTY5ZjhkNy01NzJkLTQzNjEtYWUzMy04MDljODZkMmQ3NzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlenRvLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiI2NzUzZjgzMy0wYzFjLTQ2MTUtOTM1MS03ODAwMWQxNWUwMDgiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZ3ltX293bmVyIiwiZGVmYXVsdC1yb2xlcy1tYXN0ZXIiLCJvZmZsaW5lX2FjY2VzcyIsImd5bV9tZW1iZXIiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI2NzUzZjgzMy0wYzFjLTQ2MTUtOTM1MS03ODAwMWQxNWUwMDgiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJKdWFuIFBlcmV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoianVhbkBleGFtcGxlLmNvbSIsImdpdmVuX25hbWUiOiJKdWFuIiwiZmFtaWx5X25hbWUiOiJQZXJleiIsImVtYWlsIjoianVhbkBleGFtcGxlLmNvbSJ9.VZhSU0u3qtQY_jFsMZVc8ezZ1kFOr-IQBKQ2LPJNvPWckESl5E2jvUEp03JgqDTmLEW3fsLfkvk7iBp9Gi_0fOUy3XmUS_5QoL6L-uu_X_5Woyk--BbWUko7ZN2kwh4bf9BPQz7bdP0nrIvDS-0gwgH03XmDIlbNnwY0QG_-WycUxqDKr3h5lJ-HLsLgmE7qZDheyYrwhwidVkzH15BF0VcHpaRZGThSGo9Q-_ouEz-CeSluAPwMsbDF2CGLnyhRCqs6PiM1IqW0WIuzv5wM4Q2WmCXmE01u6SP9GMoIKTPBDENr-wtkPE4QL6J6TZ4HSxlJBDmQXlcwQ925xpqzZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/classes/classes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"classes",
+						"classes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET- Suppliers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJYeFhiMno5YTVRZFgtOG9YenNkeGFYTkJwTXJQRElPNGc1MXpQZ2NEWS1jIn0.eyJleHAiOjE3NDc4ODY2MTcsImlhdCI6MTc0Nzg4NjMxNywianRpIjoiNTg2MTdjMjYtZTM3ZS00YTg0LTgwZjktN2RiNjdjYWVmNjFlIiwiaXNzIjoiaHR0cDovL2tleWNsb2FrOjgwODAvcmVhbG1zL21hc3RlciIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJhNTY5ZjhkNy01NzJkLTQzNjEtYWUzMy04MDljODZkMmQ3NzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlenRvLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiI2ZjkxNWEzOC1mZGMyLTQ2Y2QtYTY3Ni1lZThhMGM5YzQ2NDUiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZ3ltX293bmVyIiwiZGVmYXVsdC1yb2xlcy1tYXN0ZXIiLCJvZmZsaW5lX2FjY2VzcyIsImd5bV9tZW1iZXIiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI2ZjkxNWEzOC1mZGMyLTQ2Y2QtYTY3Ni1lZThhMGM5YzQ2NDUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJKdWFuIFBlcmV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoianVhbkBleGFtcGxlLmNvbSIsImdpdmVuX25hbWUiOiJKdWFuIiwiZmFtaWx5X25hbWUiOiJQZXJleiIsImVtYWlsIjoianVhbkBleGFtcGxlLmNvbSJ9.SLwKSpbNzpBbGX68_sCc2MoXZX2HrmeeIfJd85HMtETyOjXmczMkKtHSAShYHV0Xjn9EIj_6LE2DvCAcgK4HSc58y7JYnKtOYhrGtJxEFUss9mVkBW5EpRhBUGa0vm894Bdlb2xObpmhqUhuvJebt-VAugjTXsUG7pIW206q-h9OBEciOeESSQeQjZpfuq3XCjG5FAg7UrgT9CTaHDoZGk-ZA2Qdi7iyvaXW9Ch_qyzbTRM1rm4qgcAwGayEiIym14LD2GPlDBW1nrfLYtMIZnzdEDBcYMxSijNviEihvlI5Tew1EjL42HznVibRzqfjm94Q4TDVGUHo1Jdnpj_aPQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/suppliers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"suppliers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET- Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJYeFhiMno5YTVRZFgtOG9YenNkeGFYTkJwTXJQRElPNGc1MXpQZ2NEWS1jIn0.eyJleHAiOjE3NDc4ODY2MTcsImlhdCI6MTc0Nzg4NjMxNywianRpIjoiNTg2MTdjMjYtZTM3ZS00YTg0LTgwZjktN2RiNjdjYWVmNjFlIiwiaXNzIjoiaHR0cDovL2tleWNsb2FrOjgwODAvcmVhbG1zL21hc3RlciIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJhNTY5ZjhkNy01NzJkLTQzNjEtYWUzMy04MDljODZkMmQ3NzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlenRvLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiI2ZjkxNWEzOC1mZGMyLTQ2Y2QtYTY3Ni1lZThhMGM5YzQ2NDUiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZ3ltX293bmVyIiwiZGVmYXVsdC1yb2xlcy1tYXN0ZXIiLCJvZmZsaW5lX2FjY2VzcyIsImd5bV9tZW1iZXIiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI2ZjkxNWEzOC1mZGMyLTQ2Y2QtYTY3Ni1lZThhMGM5YzQ2NDUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJKdWFuIFBlcmV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoianVhbkBleGFtcGxlLmNvbSIsImdpdmVuX25hbWUiOiJKdWFuIiwiZmFtaWx5X25hbWUiOiJQZXJleiIsImVtYWlsIjoianVhbkBleGFtcGxlLmNvbSJ9.SLwKSpbNzpBbGX68_sCc2MoXZX2HrmeeIfJd85HMtETyOjXmczMkKtHSAShYHV0Xjn9EIj_6LE2DvCAcgK4HSc58y7JYnKtOYhrGtJxEFUss9mVkBW5EpRhBUGa0vm894Bdlb2xObpmhqUhuvJebt-VAugjTXsUG7pIW206q-h9OBEciOeESSQeQjZpfuq3XCjG5FAg7UrgT9CTaHDoZGk-ZA2Qdi7iyvaXW9Ch_qyzbTRM1rm4qgcAwGayEiIym14LD2GPlDBW1nrfLYtMIZnzdEDBcYMxSijNviEihvlI5Tew1EjL42HznVibRzqfjm94Q4TDVGUHo1Jdnpj_aPQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/suppliers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"suppliers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET- Purchases",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJYeFhiMno5YTVRZFgtOG9YenNkeGFYTkJwTXJQRElPNGc1MXpQZ2NEWS1jIn0.eyJleHAiOjE3NDc4ODY2MTcsImlhdCI6MTc0Nzg4NjMxNywianRpIjoiNTg2MTdjMjYtZTM3ZS00YTg0LTgwZjktN2RiNjdjYWVmNjFlIiwiaXNzIjoiaHR0cDovL2tleWNsb2FrOjgwODAvcmVhbG1zL21hc3RlciIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJhNTY5ZjhkNy01NzJkLTQzNjEtYWUzMy04MDljODZkMmQ3NzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlenRvLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiI2ZjkxNWEzOC1mZGMyLTQ2Y2QtYTY3Ni1lZThhMGM5YzQ2NDUiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZ3ltX293bmVyIiwiZGVmYXVsdC1yb2xlcy1tYXN0ZXIiLCJvZmZsaW5lX2FjY2VzcyIsImd5bV9tZW1iZXIiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI2ZjkxNWEzOC1mZGMyLTQ2Y2QtYTY3Ni1lZThhMGM5YzQ2NDUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJKdWFuIFBlcmV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoianVhbkBleGFtcGxlLmNvbSIsImdpdmVuX25hbWUiOiJKdWFuIiwiZmFtaWx5X25hbWUiOiJQZXJleiIsImVtYWlsIjoianVhbkBleGFtcGxlLmNvbSJ9.SLwKSpbNzpBbGX68_sCc2MoXZX2HrmeeIfJd85HMtETyOjXmczMkKtHSAShYHV0Xjn9EIj_6LE2DvCAcgK4HSc58y7JYnKtOYhrGtJxEFUss9mVkBW5EpRhBUGa0vm894Bdlb2xObpmhqUhuvJebt-VAugjTXsUG7pIW206q-h9OBEciOeESSQeQjZpfuq3XCjG5FAg7UrgT9CTaHDoZGk-ZA2Qdi7iyvaXW9Ch_qyzbTRM1rm4qgcAwGayEiIym14LD2GPlDBW1nrfLYtMIZnzdEDBcYMxSijNviEihvlI5Tew1EjL42HznVibRzqfjm94Q4TDVGUHo1Jdnpj_aPQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/purchases/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"purchases",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create class",
+			"request": {
+				"auth": {
+					"type": "inherit"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"TEST Avanzado\",\r\n  \"description\": \"Clase de yoga para practicantes avanzados\",\r\n  \"instructor\": \"Ana López\",\r\n  \"start_time\": \"2025-06-01T09:00:00\",\r\n  \"end_time\": \"2025-06-01T10:30:00\",\r\n  \"capacity\": 20,\r\n  \"location\": \"Sala 1\",\r\n  \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/classes/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"classes",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET class",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJYeFhiMno5YTVRZFgtOG9YenNkeGFYTkJwTXJQRElPNGc1MXpQZ2NEWS1jIn0.eyJleHAiOjE3NDgxNDkxMDQsImlhdCI6MTc0ODE0ODgwNCwianRpIjoiNjRjY2M4YTQtMDJhMy00YTlkLWFlZWEtOWM0M2FjMzZkMjk4IiwiaXNzIjoiaHR0cDovL2tleWNsb2FrOjgwODAvcmVhbG1zL21hc3RlciIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJhNTY5ZjhkNy01NzJkLTQzNjEtYWUzMy04MDljODZkMmQ3NzIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlenRvLWNsaWVudCIsInNlc3Npb25fc3RhdGUiOiI3YWRmMjJhNC04YThjLTRjMjUtODk2Zi02NmUwMjhhYmI2ODQiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZ3ltX293bmVyIiwiZGVmYXVsdC1yb2xlcy1tYXN0ZXIiLCJvZmZsaW5lX2FjY2VzcyIsImd5bV9tZW1iZXIiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI3YWRmMjJhNC04YThjLTRjMjUtODk2Zi02NmUwMjhhYmI2ODQiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJKdWFuIFBlcmV6IiwicHJlZmVycmVkX3VzZXJuYW1lIjoianVhbkBleGFtcGxlLmNvbSIsImdpdmVuX25hbWUiOiJKdWFuIiwiZmFtaWx5X25hbWUiOiJQZXJleiIsImVtYWlsIjoianVhbkBleGFtcGxlLmNvbSJ9.YXZCSJJ_ZwzgM5S2OSUplKwwa8EmldEWxQuAJ5c4cVuxBD3-JadxEXHFKjAQ5BBdBQvAhzhpqNcOT1U2zzSwxH9b-FAC9g31Bw0vuDk7lDV6TJOG6uCL8ca_KY8pSSEGXbyoEBfZ_INPzS4gzOfKdCOOMcJzYlnDOl-XY81stKVdAfVaDkBwQH6RKZA0OC-7zU9IFDjZ7FD0eBW02UcbKmnI8iaVR2O_uWf0ZwIyN-U6dSYQA8feM_zTRmSzzvQ6boIVJfM_xLnrFcVY8Gm5wVZDGQUwjzuZo9K2_xHQSBRq8Im8YOoU1QOElQtklRMbQMZCZsPn7yahkgQZ1jRyjQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"TEST Avanzado\",\r\n  \"description\": \"Clase de yoga para practicantes avanzados\",\r\n  \"instructor\": \"Ana López\",\r\n  \"start_time\": \"2025-06-01T09:00:00\",\r\n  \"end_time\": \"2025-06-01T10:30:00\",\r\n  \"capacity\": 20,\r\n  \"location\": \"Sala 1\",\r\n  \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/classes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"classes",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
