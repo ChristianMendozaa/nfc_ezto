@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 from app.controllers.nfc import router as nfc_router
 from app.controllers.nfc_pairing_controller import router as nfc_pairing_router
-
+from app.controllers.nfc_payments import router as nfc_payments_router
 # --- OpenAPI metadata ---
 app = FastAPI(
     title="NFC-Service",
@@ -41,7 +41,7 @@ app.include_router(
     tags=["NFC"],
 )
 app.include_router(nfc_pairing_router, tags=["NFC pairing"])
-
+app.include_router(nfc_payments_router, tags =["NFC payments"])
 # --- Modelo para salud ---
 class HealthResponse(BaseModel):
     status: str
