@@ -58,10 +58,23 @@ async def register_membership_payment(data: PaymentRequest):
     nuevo_saldo = saldo_actual - plan_price
     db.collection("members").document(member_id).update({"dinero": nuevo_saldo})
 
-    today = datetime.now(pytz.timezone("America/La_Paz")).date()
-    end_date = today + timedelta(days=plan_duration * 30)
+    la_paz_tz = pytz.timezone("America/La_Paz")
+    today = datetime.now(la_paz_tz).date()
 
-    membership_query = db.collection("user_memberships").where("user_id", "==", member_id).where("plan_id", "==", data.plan_id).get()
+    # Buscar membresía activa actual
+    membership_query = db.collection("user_memberships").where("user_id", "==", member_id).where("status", "==", "active").get()
+
+    if membership_query:
+        existing_doc = membership_query[0]
+        existing_data = existing_doc.to_dict()
+        current_end_date = datetime.strptime(existing_data["end_date"], "%Y-%m-%d").date()
+        # Si ya venció, empieza desde hoy; si no, suma al final
+        base_date = max(today, current_end_date)
+    else:
+        base_date = today
+
+    # Calcular nuevo end_date sumando meses (aprox. 30 días por mes)
+    end_date = base_date + timedelta(days=plan_duration * 30)
 
     membership_data = {
         "user_id": member_id,
@@ -75,7 +88,6 @@ async def register_membership_payment(data: PaymentRequest):
     }
 
     if membership_query:
-        existing_doc = membership_query[0]
         db.collection("user_memberships").document(existing_doc.id).update(membership_data)
     else:
         db.collection("user_memberships").add(membership_data)
@@ -87,7 +99,7 @@ async def register_membership_payment(data: PaymentRequest):
         "plan_name": plan_name,
         "amount": plan_price,
         "category": "membership",
-        "timestamp": datetime.now(pytz.timezone("America/La_Paz")).isoformat()
+        "timestamp": datetime.now(la_paz_tz).isoformat()
     })
 
     update_monthly_revenue(plan_price)
