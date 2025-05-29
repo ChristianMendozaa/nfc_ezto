@@ -159,7 +159,7 @@ async def get_products():
     return [product.to_dict() for product in products]
 
 
-@router.get("/history/{member_id}")
-async def get_payment_history(member_id: str):
-    docs = db.collection("payment_logs").where("member_id", "==", member_id).order_by("timestamp", direction="DESCENDING").stream()
+@router.get("/history")
+async def get_payment_history():
+    docs = db.collection("payment_logs").order_by("timestamp", direction="DESCENDING").stream()
     return [doc.to_dict() for doc in docs]
